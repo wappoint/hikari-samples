@@ -1,0 +1,22 @@
+server:
+  port: 8080
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.danny.domain
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.0.70:3306/caoke_app?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: yijale
+    password: 12345678
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      #max-lifetime: 180000
+      #idle-timeout: 30000
+      data-source-properties:
+        prepStmtCacheSize: 250
+  thymeleaf:
+    check-template-location: false
+logging:
+  level:
+    com.danny.dao: debug
